@@ -8,7 +8,7 @@ const UserType = new GraphQLObjectType({
   name: "User",
   fields: {
     id: {
-      type: GraphQLString,
+      type: GraphQLInt,
     },
     firstName: {
       type: GraphQLString,
@@ -26,11 +26,18 @@ const RootQuery = new GraphQLObjectType({
       type: UserType,
       args: {
         id: {
-          type: GraphQLString,
+          type: GraphQLInt,
         },
       },
-      resolve(parentValue, args) {
-        return _.find(users, { id: args.id });
+      async resolve(parentValue, args) {
+        return fetch(`https://dummyjson.com/users/${args.id}`)
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            console.log("data", data);
+            return data;
+          });
       },
     },
   },

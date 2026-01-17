@@ -1,7 +1,7 @@
-const graphql = require("graphql");
+import graphql from "graphql";
 const { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLSchema } = graphql;
-const _ = require("lodash");
-const { users } = require("../data.js");
+import _ from "lodash";
+import { users } from "../data.js";
 
 // How to define not null
 const UserType = new GraphQLObjectType({
@@ -43,6 +43,6 @@ const RootQuery = new GraphQLObjectType({
   },
 });
 
-module.exports = new GraphQLSchema({
+export default new GraphQLSchema({
   query: RootQuery,
 });

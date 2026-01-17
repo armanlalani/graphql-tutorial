@@ -1,5 +1,4 @@
-import graphql from "graphql";
-const { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLSchema } = graphql;
+import { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLSchema } from "graphql";
 import _ from "lodash";
 import { users } from "../data.js";
 

@@ -5,7 +5,10 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "dev": "tsx watch src/server.ts"
+        "dev": "tsx watch src/server.ts",
+        "build": "rimraf dist && tsc",
+        "start": "node dist/server.js",
+        "type-check": "tsc --noEmit"
     },
     "author": "",
     "license": "ISC",
@@ -22,6 +25,7 @@
         "@types/express": "^5.0.6",
         "@types/lodash": "^4.17.23",
         "@types/node": "^25.0.9",
+        "rimraf": "^6.1.2",
         "tsx": "^4.21.0",
         "typescript": "^5.9.3"
     }

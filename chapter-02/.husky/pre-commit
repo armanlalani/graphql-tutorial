@@ -1,1 +1,3 @@
-npm test
+#!/bin/sh
+cd chapter-02
+npx lint-staged

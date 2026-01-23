@@ -3,13 +3,22 @@ import {
   GraphQLString,
   GraphQLInt,
   GraphQLSchema,
-} from "graphql";
-import _ from "lodash";
-import { users } from "../data.js";
+} from 'graphql';
+import _ from 'lodash';
+
+interface User {
+  id: number;
+  firstName: string;
+  age: number;
+}
+
+interface UserArgs {
+  id: number;
+}
 
 // How to define not null
 const UserType = new GraphQLObjectType({
-  name: "User",
+  name: 'User',
   fields: {
     id: {
       type: GraphQLInt,
@@ -24,7 +33,7 @@ const UserType = new GraphQLObjectType({
 });
 
 const RootQuery = new GraphQLObjectType({
-  name: "RootQueryType2",
+  name: 'RootQueryType2',
   fields: {
     user: {
       type: UserType,
@@ -33,15 +42,12 @@ const RootQuery = new GraphQLObjectType({
           type: GraphQLInt,
         },
       },
-      async resolve(parentValue, args) {
-        return fetch(`https://dummyjson.com/users/${args.id}`)
-          .then((res) => {
-            return res.json();
-          })
-          .then((data) => {
-            console.log("data", data);
-            return data;
-          });
+      async resolve(_parentValue, args: UserArgs): Promise<User> {
+        const res = await fetch(`https://dummyjson.com/users/${args.id}`);
+
+        const data = (await res.json()) as User;
+
+        return data;
       },
     },
   },

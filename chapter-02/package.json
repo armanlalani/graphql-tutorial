@@ -15,7 +15,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "prepare": "husky"
+    "prepare": "git config core.hooksPath ./chapter-02/.husky"
   },
   "dependencies": {
     "axios": "^1.4.0",

@@ -3,6 +3,7 @@ import {
   GraphQLString,
   GraphQLInt,
   GraphQLSchema,
+  GraphQLNonNull,
 } from 'graphql';
 import _ from 'lodash';
 
@@ -39,7 +40,7 @@ const RootQuery = new GraphQLObjectType({
       type: UserType,
       args: {
         id: {
-          type: GraphQLInt,
+          type: new GraphQLNonNull(GraphQLInt),
         },
       },
       async resolve(_parentValue, args: UserArgs): Promise<User> {

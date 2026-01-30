@@ -44,7 +44,9 @@ const RootQuery = new GraphQLObjectType({
         },
       },
       async resolve(_parentValue, args: UserArgs): Promise<User> {
-        const res = await fetch(`https://dummyjson.com/users/${args.id}`);
+        const res = await fetch(
+          `https://testapi.devtoolsdaily.com/users/${args.id}`,
+        );
 
         const data = (await res.json()) as User;
 

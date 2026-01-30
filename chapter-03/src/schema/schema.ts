@@ -7,10 +7,37 @@ import {
 } from 'graphql';
 import _ from 'lodash';
 
+interface Company {
+  id: number;
+  name: string;
+  countryCode: string;
+  market_cap: string;
+}
+
+const CompanyType = new GraphQLObjectType({
+  name: 'Company',
+  fields: {
+    id: {
+      type: GraphQLInt,
+    },
+    name: {
+      type: GraphQLString,
+    },
+    countryCode: {
+      type: GraphQLString,
+    },
+    market_cap: {
+      type: GraphQLString,
+    },
+  },
+});
+
 interface User {
   id: number;
   firstName: string;
-  age: number;
+  lastName: string;
+  countryCode: string;
+  companyId: number;
 }
 
 interface UserArgs {
@@ -27,8 +54,26 @@ const UserType = new GraphQLObjectType({
     firstName: {
       type: GraphQLString,
     },
-    age: {
+    lastName: {
+      type: GraphQLString,
+    },
+    countryCode: {
+      type: GraphQLString,
+    },
+    companyId: {
       type: GraphQLInt,
+    },
+    company: {
+      type: CompanyType,
+      async resolve(parentValue: User) {
+        const res = await fetch(
+          `https://testapi.devtoolsdaily.com/companies/${parentValue.companyId}`,
+        );
+
+        const data = (await res.json()) as Company;
+
+        return data;
+      },
     },
   },
 });

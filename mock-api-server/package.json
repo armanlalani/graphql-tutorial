@@ -1,0 +1,30 @@
+{
+  "name": "mock-api-server",
+  "version": "1.0.0",
+  "description": "Mock API server for graphql tutorial",
+  "keywords": [
+    "mock",
+    "server"
+  ],
+  "homepage": "https://github.com/armanlalani/graphql-tutorial#readme",
+  "bugs": {
+    "url": "https://github.com/armanlalani/graphql-tutorial/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/armanlalani/graphql-tutorial.git"
+  },
+  "license": "ISC",
+  "author": "Arman Lalani",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "generate-data": "node index.js",
+    "json:server": "json-server --watch db.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.3.0",
+    "json-server": "^0.17.4"
+  }
+}

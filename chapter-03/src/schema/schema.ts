@@ -6,12 +6,17 @@ import {
   GraphQLNonNull,
 } from 'graphql';
 import _ from 'lodash';
+import { CONFIG } from '../config/env.js';
 
 interface Company {
   id: number;
   name: string;
   countryCode: string;
   market_cap: string;
+}
+
+interface CompanyArgs {
+  id: number;
 }
 
 const CompanyType = new GraphQLObjectType({
@@ -67,7 +72,7 @@ const UserType = new GraphQLObjectType({
       type: CompanyType,
       async resolve(parentValue: User) {
         const res = await fetch(
-          `https://testapi.devtoolsdaily.com/companies/${parentValue.companyId}`,
+          `${CONFIG.DB_URL}/companies/${parentValue.companyId}`,
         );
 
         const data = (await res.json()) as Company;
@@ -89,11 +94,26 @@ const RootQuery = new GraphQLObjectType({
         },
       },
       async resolve(_parentValue, args: UserArgs): Promise<User> {
-        const res = await fetch(
-          `https://testapi.devtoolsdaily.com/users/${args.id}`,
-        );
+        console.info('Fetching data for user...');
+        const res = await fetch(`${CONFIG.DB_URL}/users/${args.id}`);
 
         const data = (await res.json()) as User;
+        console.info('data', data);
+
+        return data;
+      },
+    },
+    company: {
+      type: CompanyType,
+      args: {
+        id: {
+          type: new GraphQLNonNull(GraphQLInt),
+        },
+      },
+      async resolve(_parentValue, args: CompanyArgs): Promise<Company> {
+        const res = await fetch(`${CONFIG.DB_URL}/companies/${args.id}`);
+
+        const data = (await res.json()) as Company;
 
         return data;
       },

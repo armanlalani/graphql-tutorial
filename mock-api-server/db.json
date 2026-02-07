@@ -1,0 +1,416 @@
+{
+  "companies": [
+    {
+      "id": 101,
+      "name": "Bode - Quitzon",
+      "countryCode": "BQ",
+      "market_cap": "90B"
+    },
+    {
+      "id": 102,
+      "name": "Dach, Nienow and Kshlerin",
+      "countryCode": "VN",
+      "market_cap": "806B"
+    },
+    {
+      "id": 103,
+      "name": "Hauck - Ortiz",
+      "countryCode": "AF",
+      "market_cap": "182B"
+    },
+    {
+      "id": 104,
+      "name": "Vandervort - Waelchi",
+      "countryCode": "IT",
+      "market_cap": "326B"
+    },
+    {
+      "id": 105,
+      "name": "Parker - Ritchie",
+      "countryCode": "CH",
+      "market_cap": "849B"
+    },
+    {
+      "id": 106,
+      "name": "Orn - Treutel",
+      "countryCode": "CI",
+      "market_cap": "388B"
+    },
+    {
+      "id": 107,
+      "name": "Rosenbaum - Glover",
+      "countryCode": "TZ",
+      "market_cap": "980B"
+    },
+    {
+      "id": 108,
+      "name": "Gerlach - Beier",
+      "countryCode": "AM",
+      "market_cap": "418B"
+    },
+    {
+      "id": 109,
+      "name": "Lind - Schuppe",
+      "countryCode": "TL",
+      "market_cap": "33B"
+    },
+    {
+      "id": 110,
+      "name": "Terry, Ullrich and Treutel",
+      "countryCode": "RO",
+      "market_cap": "911B"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Julius",
+      "lastName": "Deckow",
+      "countryCode": "LT",
+      "companyId": 103
+    },
+    {
+      "id": 2,
+      "firstName": "Jaylan",
+      "lastName": "Zieme",
+      "countryCode": "CD",
+      "companyId": 109
+    },
+    {
+      "id": 3,
+      "firstName": "Yazmin",
+      "lastName": "Ebert",
+      "countryCode": "VU",
+      "companyId": 105
+    },
+    {
+      "id": 4,
+      "firstName": "Della",
+      "lastName": "O'Reilly",
+      "countryCode": "MR",
+      "companyId": 106
+    },
+    {
+      "id": 5,
+      "firstName": "Laurence",
+      "lastName": "Stanton",
+      "countryCode": "CR",
+      "companyId": 107
+    },
+    {
+      "id": 6,
+      "firstName": "Myrtle",
+      "lastName": "McCullough",
+      "countryCode": "PS",
+      "companyId": 102
+    },
+    {
+      "id": 7,
+      "firstName": "Estella",
+      "lastName": "Gutkowski",
+      "countryCode": "SS",
+      "companyId": 108
+    },
+    {
+      "id": 8,
+      "firstName": "Josefina",
+      "lastName": "Russel",
+      "countryCode": "EG",
+      "companyId": 104
+    },
+    {
+      "id": 9,
+      "firstName": "Harmony",
+      "lastName": "Connelly",
+      "countryCode": "DJ",
+      "companyId": 101
+    },
+    {
+      "id": 10,
+      "firstName": "Manuel",
+      "lastName": "Thompson",
+      "countryCode": "MG",
+      "companyId": 104
+    },
+    {
+      "id": 11,
+      "firstName": "Silvia",
+      "lastName": "Erdman",
+      "countryCode": "CR",
+      "companyId": 105
+    },
+    {
+      "id": 12,
+      "firstName": "Bernie",
+      "lastName": "Herman",
+      "countryCode": "NI",
+      "companyId": 103
+    },
+    {
+      "id": 13,
+      "firstName": "Frank",
+      "lastName": "Farrell",
+      "countryCode": "OM",
+      "companyId": 106
+    },
+    {
+      "id": 14,
+      "firstName": "Everett",
+      "lastName": "Lubowitz",
+      "countryCode": "EG",
+      "companyId": 110
+    },
+    {
+      "id": 15,
+      "firstName": "Kelli",
+      "lastName": "Denesik",
+      "countryCode": "QA",
+      "companyId": 104
+    },
+    {
+      "id": 16,
+      "firstName": "Lorena",
+      "lastName": "Howell",
+      "countryCode": "RS",
+      "companyId": 108
+    },
+    {
+      "id": 17,
+      "firstName": "Griffin",
+      "lastName": "Schaden",
+      "countryCode": "NA",
+      "companyId": 105
+    },
+    {
+      "id": 18,
+      "firstName": "Lamar",
+      "lastName": "McKenzie",
+      "countryCode": "ME",
+      "companyId": 103
+    },
+    {
+      "id": 19,
+      "firstName": "Hoyt",
+      "lastName": "Feil",
+      "countryCode": "LR",
+      "companyId": 105
+    },
+    {
+      "id": 20,
+      "firstName": "Dallin",
+      "lastName": "Erdman",
+      "countryCode": "MD",
+      "companyId": 108
+    },
+    {
+      "id": 21,
+      "firstName": "Alex",
+      "lastName": "Bayer",
+      "countryCode": "MK",
+      "companyId": 108
+    },
+    {
+      "id": 22,
+      "firstName": "Lillian",
+      "lastName": "Hilll",
+      "countryCode": "RW",
+      "companyId": 110
+    },
+    {
+      "id": 23,
+      "firstName": "Raymond",
+      "lastName": "Funk",
+      "countryCode": "PL",
+      "companyId": 102
+    },
+    {
+      "id": 24,
+      "firstName": "Rosemarie",
+      "lastName": "Collins",
+      "countryCode": "CF",
+      "companyId": 105
+    },
+    {
+      "id": 25,
+      "firstName": "Bradford",
+      "lastName": "Kuhic",
+      "countryCode": "BY",
+      "companyId": 105
+    },
+    {
+      "id": 26,
+      "firstName": "Andy",
+      "lastName": "DuBuque",
+      "countryCode": "OM",
+      "companyId": 106
+    },
+    {
+      "id": 27,
+      "firstName": "Leonard",
+      "lastName": "Kutch",
+      "countryCode": "DM",
+      "companyId": 108
+    },
+    {
+      "id": 28,
+      "firstName": "Addie",
+      "lastName": "Douglas",
+      "countryCode": "EC",
+      "companyId": 104
+    },
+    {
+      "id": 29,
+      "firstName": "Edmund",
+      "lastName": "Schmidt",
+      "countryCode": "AF",
+      "companyId": 105
+    },
+    {
+      "id": 30,
+      "firstName": "Filomena",
+      "lastName": "Haag",
+      "countryCode": "SB",
+      "companyId": 110
+    },
+    {
+      "id": 31,
+      "firstName": "Emmy",
+      "lastName": "Wisoky",
+      "countryCode": "CH",
+      "companyId": 109
+    },
+    {
+      "id": 32,
+      "firstName": "Teresa",
+      "lastName": "Moore",
+      "countryCode": "BI",
+      "companyId": 108
+    },
+    {
+      "id": 33,
+      "firstName": "Laverne",
+      "lastName": "Bashirian",
+      "countryCode": "ZM",
+      "companyId": 104
+    },
+    {
+      "id": 34,
+      "firstName": "Gertrude",
+      "lastName": "Skiles",
+      "countryCode": "GR",
+      "companyId": 104
+    },
+    {
+      "id": 35,
+      "firstName": "Ludie",
+      "lastName": "Greenholt",
+      "countryCode": "SK",
+      "companyId": 103
+    },
+    {
+      "id": 36,
+      "firstName": "Christian",
+      "lastName": "Emmerich",
+      "countryCode": "LB",
+      "companyId": 106
+    },
+    {
+      "id": 37,
+      "firstName": "Madyson",
+      "lastName": "Howell-Lynch",
+      "countryCode": "ML",
+      "companyId": 101
+    },
+    {
+      "id": 38,
+      "firstName": "Antonio",
+      "lastName": "Rath-Paucek",
+      "countryCode": "GF",
+      "companyId": 109
+    },
+    {
+      "id": 39,
+      "firstName": "Ken",
+      "lastName": "Kovacek",
+      "countryCode": "TD",
+      "companyId": 106
+    },
+    {
+      "id": 40,
+      "firstName": "Lewis",
+      "lastName": "Kertzmann",
+      "countryCode": "GH",
+      "companyId": 101
+    },
+    {
+      "id": 41,
+      "firstName": "Lucienne",
+      "lastName": "Davis",
+      "countryCode": "TJ",
+      "companyId": 103
+    },
+    {
+      "id": 42,
+      "firstName": "Joel",
+      "lastName": "Altenwerth",
+      "countryCode": "ZW",
+      "companyId": 109
+    },
+    {
+      "id": 43,
+      "firstName": "Tiara",
+      "lastName": "Lind",
+      "countryCode": "MW",
+      "companyId": 101
+    },
+    {
+      "id": 44,
+      "firstName": "Ayden",
+      "lastName": "Lockman",
+      "countryCode": "KP",
+      "companyId": 108
+    },
+    {
+      "id": 45,
+      "firstName": "Anna",
+      "lastName": "Feil",
+      "countryCode": "RU",
+      "companyId": 105
+    },
+    {
+      "id": 46,
+      "firstName": "Cristopher",
+      "lastName": "Bins",
+      "countryCode": "PG",
+      "companyId": 109
+    },
+    {
+      "id": 47,
+      "firstName": "Kenneth",
+      "lastName": "Batz",
+      "countryCode": "DO",
+      "companyId": 102
+    },
+    {
+      "id": 48,
+      "firstName": "Alan",
+      "lastName": "Kunze",
+      "countryCode": "AD",
+      "companyId": 101
+    },
+    {
+      "id": 49,
+      "firstName": "Buddy",
+      "lastName": "Jacobson",
+      "countryCode": "BZ",
+      "companyId": 110
+    },
+    {
+      "id": 50,
+      "firstName": "Janis",
+      "lastName": "Schaden",
+      "countryCode": "TC",
+      "companyId": 104
+    }
+  ]
+}

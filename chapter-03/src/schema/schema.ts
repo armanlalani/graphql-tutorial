@@ -4,6 +4,7 @@ import {
   GraphQLInt,
   GraphQLSchema,
   GraphQLNonNull,
+  GraphQLList,
 } from 'graphql';
 import _ from 'lodash';
 import { CONFIG } from '../config/env.js';
@@ -19,9 +20,9 @@ interface CompanyArgs {
   id: number;
 }
 
-const CompanyType = new GraphQLObjectType({
+const CompanyType: GraphQLObjectType = new GraphQLObjectType({
   name: 'Company',
-  fields: {
+  fields: () => ({
     id: {
       type: GraphQLInt,
     },
@@ -34,7 +35,20 @@ const CompanyType = new GraphQLObjectType({
     market_cap: {
       type: GraphQLString,
     },
-  },
+    users: {
+      type: new GraphQLList(UserType),
+      async resolve(parentValue: Company) {
+        console.info(parentValue);
+        const res = await fetch(
+          `${CONFIG.DB_URL}/companies/${parentValue.id}/users`,
+        );
+        const data = (await res.json()) as User[];
+        console.info('users', data);
+
+        return data;
+      },
+    },
+  }),
 });
 
 interface User {
@@ -50,9 +64,9 @@ interface UserArgs {
 }
 
 // How to define not null
-const UserType = new GraphQLObjectType({
+const UserType: GraphQLObjectType = new GraphQLObjectType({
   name: 'User',
-  fields: {
+  fields: () => ({
     id: {
       type: GraphQLInt,
     },
@@ -80,7 +94,7 @@ const UserType = new GraphQLObjectType({
         return data;
       },
     },
-  },
+  }),
 });
 
 const RootQuery = new GraphQLObjectType({
